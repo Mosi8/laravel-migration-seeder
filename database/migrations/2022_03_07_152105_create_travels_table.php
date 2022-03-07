@@ -16,9 +16,9 @@ class CreateTravelsTable extends Migration
         Schema::create('travels', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->char('luogo', 50);
-            $table->char('durata', 10);
-            $table->char('struttura', 100);
+            $table->string('luogo', 50);
+            $table->integer('durata');
+            $table->string('struttura', 100);
             $table->integer('num_persone');
             $table->text('descrizione');
             $table->integer('costo');

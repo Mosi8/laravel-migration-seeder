@@ -7,6 +7,13 @@
     <title>Travels</title>
 </head>
 <body>
-    
+    @foreach ($ls_viaggi as $chiave => $viaggio)
+                Luogo: {{$viaggio['luogo']}};
+                Durata: {{$viaggio['durata']}} giorni;
+                Struttura: {{$viaggio['struttura']}};
+                Persone: {{$viaggio['num_persone']}};
+                Descrizione: {{$viaggio['descrizione']}};
+                Costo: {{$viaggio['costo']}}€; <br>
+    @endforeach
 </body>
 </html>

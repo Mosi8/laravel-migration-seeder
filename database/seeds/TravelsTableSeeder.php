@@ -18,10 +18,10 @@ class TravelsTableSeeder extends Seeder
 
         for ($i=0; $i < 15; $i++) { 
             $newTravel = new Travel();
-            $newTravel->luogo = $faker->words();
-            $newTravel->durata = $faker->randomDigitNotNull();
-            $newTravel->struttura = $faker->words(2);
-            $newTravel->num_persone = $faker->numberBetween(1, 4);
+            $newTravel->luogo = 'Milano';
+            $newTravel->durata = $faker->numberBetween(1, 7);
+            $newTravel->struttura = $faker->word();
+            $newTravel->num_persone = $faker->numberBetween(1, 5);
             $newTravel->descrizione = $faker->paragraph();
             $newTravel->costo = $faker->numberBetween(100, 300);
             $newTravel->save();
