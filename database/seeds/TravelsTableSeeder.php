@@ -15,18 +15,6 @@ class TravelsTableSeeder extends Seeder
 
     public function run(Faker $faker)
     {
-        $travels = [];
-        foreach ($travels as $travel){
-            $newTravel = new Travel();
-            $newTravel->luogo = $travel['luogo'];
-            $newTravel->durata = $travel['durata'];
-            $newTravel->struttura = $travel['struttura'];
-            $newTravel->num_persone = $travel['num_persone'];
-            $newTravel->descrizione = $travel['descrizione'];
-            $newTravel->costo = $travel['costo'];
-            $newTravel->save();
-
-        }
 
         for ($i=0; $i < 15; $i++) { 
             $newTravel = new Travel();
